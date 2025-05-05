@@ -171,9 +171,32 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int number, digit, sum = 0;
+    scanf("%d", &number);
+    int originalNumber = number;
+    if (number < 0) {
+        number = -number;
+    }
+    for (; number > 0; number /= 10) {
+        digit = number % 10;
+
+        if (digit % 2 != 0) {
+            sum += digit;
+        }
+    }
+    printf("Sum of odd digits in %d is %d\n", originalNumber, sum);
+    return 0;
+}
+
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/b4848f19-cc58-44c2-ace5-b7a83f87b5b3)
+
 
 
 
@@ -201,9 +224,36 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
+```
+#include <stdio.h>
+long long factorial(int n);
+
+int main() {
+    int number;
+    long long result;
+    scanf("%d", &number);
+    if (number < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        result = factorial(number);
+        printf("Factorial of %d is %lld\n", number, result);
+    }
+    return 0;
+}
+long long factorial(int n) {
+    long long fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/9154551f-9348-4828-8b85-a995cd796d73)
+
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
