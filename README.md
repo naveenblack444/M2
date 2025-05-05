@@ -12,8 +12,27 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 7.	Continue the loop until you have iterated through all numbers from M to N.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int M, N;
+    scanf("%d %d", &M,&N);
+
+    printf("Even numbers from %d to %d are:\n", M, N);
+    for (int i = M; i <= N; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
+
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/6da14bd8-2b72-4cce-8474-3177d985a42e)
+
 
 
 
@@ -45,9 +64,30 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int i, j, rows;
+    scanf("%d", &rows);
+    for(i = 1; i <= rows; i++) {
+        for(j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        for(j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/856374a0-a2ed-4236-82df-c8d642aad980)
+
 
 
 
@@ -74,9 +114,34 @@ Write a C program to perform addition and subtraction of two numbers using funct
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+void add(int a, int b);
+void subtract(int a, int b);
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+    add(num1, num2);
+    subtract(num1, num2);
+
+    return 0;
+}
+void add(int a, int b) {
+    int sum = a + b;
+    printf("Addition: %d + %d = %d\n", a, b, sum);
+}
+void subtract(int a, int b) {
+    int difference = a - b;
+    printf("Subtraction: %d - %d = %d\n", a, b, difference);
+}
+
+```
 
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/96071634-20d3-4664-bb25-3ae91ad23029)
 
 
 
